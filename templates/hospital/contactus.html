@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>LazyCoder || sumit</title>
+  <style>
+    body {
+      background-image: url('{% static "images/your_image.jpg" %}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      margin-top: 50px; /* Adjust margin top to position the form */
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    h3.alert {
+      background-color: white; /* Change background color to blue */
+      color: #DE5D83; /* Change text color to pink */
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block; /* Ensures the background color covers the whole text */
+    }
+  </style>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br><br>
+  <center>
+    <h3 class='alert alert-success'><span class="alert">Send Us Your Valuable Feedback !</span></h3>
+
+    <div class="form-container">
+      <form method="POST">
+        <!-- Very Important csrf Token -->
+        {% csrf_token %}
+        <div class="form-group">
+          <p>
+            <h3>{{ form.as_p }}</h3>
+          </p>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Send Message">
+        </div>
+      </form>
+    </div>
+  </center>
+</body>
+
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
+
+</html>

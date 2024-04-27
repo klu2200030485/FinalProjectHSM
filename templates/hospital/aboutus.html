@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>LazyCoder || sumit</title>
+  <style media="screen">
+    body {
+      background-image: url('{% static "images/your_image.jpg" %}'); /* Replace 'your_image.jpg' with the actual filename of your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    h3.alert {
+      background-color: white; /* Change background color to blue */
+      color: #DE5D83; /* Change text color to pink */
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block; /* Ensures the background color covers the whole text */
+    }
+  </style>
+  <title>sumit</title>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br><br>
+  <center>
+    <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
+  </center>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <h1 class="display-4" style="font-style: italic;">we're determined for your better life</h1>
+
+    <p class="lead"><center>A service dedicated to Hospital Admin, Doctor and Patient. And we empowers healthcare institutions with innovative and user-friendly Hospital Management Systems (HMS) to improve patient care, streamline operations, and gain valuable data insights. Our team of passionate healthcare technology experts is dedicated to providing ongoing support and ensuring your hospital's success.</center> </p>
+    <hr class="my-4">
+    <p><center>Explore our Website.</center></p>
+    <p class="lead">
+      <center><a class="btn btn-primary btn-lg" href="/" role="button">HOME</a></center>
+    </p>
+  </div>
+</body>
+
+</html>
